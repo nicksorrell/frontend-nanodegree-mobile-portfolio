@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     minifycss = require('gulp-minify-css'),
     minifyHTML = require('gulp-minify-html'),
+    imagemin = require('gulp-imagemin'),
     merge = require('merge-stream'),
     del = require('del');
 
@@ -42,10 +43,12 @@ gulp.task('scripts', function(){
 gulp.task('images', function(){
   var rootImg =
     gulp.src('src/img/*.*')
+    .pipe(imagemin())
     .pipe(gulp.dest('dist/img'));
 
   var viewsImg =
     gulp.src('src/views/images/*.*')
+    .pipe(imagemin())
     .pipe(gulp.dest('dist/views/images'));
 
   return merge(rootImg, viewsImg);
