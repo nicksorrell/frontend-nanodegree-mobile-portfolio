@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
+    autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
     minifyHTML = require('gulp-minify-html'),
     imagemin = require('gulp-imagemin'),
@@ -12,12 +13,14 @@ gulp.task('styles', function(){
   var rootCSS =
     gulp.src('src/css/*.css')
     .pipe(gulp.dest('dist/css'))
+    .pipe(autoprefixer())
     .pipe(minifycss())
     .pipe(gulp.dest('dist/css'));
 
   var viewsCSS =
     gulp.src('src/views/css/*.css')
     .pipe(gulp.dest('dist/views/css'))
+    .pipe(autoprefixer())
     .pipe(minifycss())
     .pipe(gulp.dest('dist/views/css'));
 
