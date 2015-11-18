@@ -31,6 +31,7 @@ The purpose of this project was to achieve an excellent PageSpeed score for both
 - The dx function used in resizing pizzas on the page was removed since it is not necessary
 - All loops used to modify page elements were rewritten to avoid forced synchronous layout issues
 - The code used to generate pizzas was rewritten to make use of a document fragment to avoid hitting the DOM more than is necessary
+- Modified the function used to generate background pizzas to only generate enough to fill the screen
 
 #### views/style.css
 
