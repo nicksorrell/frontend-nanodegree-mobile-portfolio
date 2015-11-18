@@ -56,7 +56,7 @@ gulp.task('images', function(){
 
 gulp.task('html', function(){
   var rootHTML =
-    gulp.src('src/*.html')
+    gulp.src(['src/*.html','src/.htaccess'])
     .pipe(gulp.dest('dist'))
     .pipe(minifyHTML())
     .pipe(gulp.dest('dist'));
