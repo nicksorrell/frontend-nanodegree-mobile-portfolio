@@ -1,0 +1,5 @@
+<ifModule mod_headers.c>
+# Turn on Expires and set default expires to 7 days for all files
+ExpiresActive On
+ExpiresDefault A604800
+</ifModule>
