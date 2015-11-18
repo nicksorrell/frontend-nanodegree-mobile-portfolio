@@ -3,7 +3,7 @@
 
 The purpose of this project was to achieve an excellent PageSpeed score for both mobile and desktop, and make the pizza page jank-less.
 
-[live version](http://nicksorrell.com/udacity/mobile-portfolio)
+[Live version](http://nicksorrell.com/udacity/mobile-portfolio)
 
 ### How to Run
 
@@ -13,7 +13,7 @@ The purpose of this project was to achieve an excellent PageSpeed score for both
 
 #### Notes
 - If you want to see the full files, look at the 'src' folder
-- If you want to re-build, run the default Gulp task again
+- If you want to re-build, run the default Gulp task again. Be sure you install via npm first!
 
 ### Optimizations
 
@@ -25,10 +25,6 @@ The purpose of this project was to achieve an excellent PageSpeed score for both
 
 - Inlined style.css styles for performance
 - Set proper media attribute for print styles
-
-#### style.css
-
-- Removed in favor of inlining styles
 
 #### views/main.js
 
