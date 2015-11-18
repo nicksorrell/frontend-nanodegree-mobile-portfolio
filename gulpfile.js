@@ -52,11 +52,11 @@ gulp.task('images', function(){
     .pipe(gulp.dest('dist/views/images'));
 
   return merge(rootImg, viewsImg);
-})
+});
 
 gulp.task('html', function(){
   var rootHTML =
-    gulp.src(['src/*.html','src/.htaccess'])
+    gulp.src('src/*.html')
     .pipe(gulp.dest('dist'))
     .pipe(minifyHTML())
     .pipe(gulp.dest('dist'));
@@ -67,8 +67,12 @@ gulp.task('html', function(){
     .pipe(minifyHTML())
     .pipe(gulp.dest('dist/views'));
 
-  return merge(rootHTML, viewsHTML);
-})
+  var htaccess =
+    gulp.src('src/.htaccess')
+    .pipe(gulp.dest('dist'));
+
+  return merge(rootHTML, viewsHTML, htaccess);
+});
 
 gulp.task('clean', function(){
   return del(['dist']);
