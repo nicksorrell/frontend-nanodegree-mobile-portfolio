@@ -8,10 +8,12 @@ The purpose of this project was to achieve an excellent PageSpeed score for both
 ### How to Run
 
 1. Access the built files in the 'dist' folder
-   NOTE #1: If you want to re-build, run the default Gulp task again
-   NOTE #2: If you want to see the full files, look at the 'src' folder
 1. Run a local server + something like [ngrok](https://ngrok.com/) or use your own hosting to view the content
 1. Measure the PageSpeed scores yourself!
+
+#### Notes
+- If you want to see the full files, look at the 'src' folder
+- If you want to re-build, run the default Gulp task again
 
 ### Optimizations
 
